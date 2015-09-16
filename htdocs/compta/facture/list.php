@@ -194,7 +194,7 @@ if ($search_montant_ttc)
 {
     $sql.= ' AND f.total_ttc = \''.$db->escape(price2num(trim($search_montant_ttc))).'\'';
 }
-if ($search_status != '')
+if ($search_status != '' && $search_status != '-1')
 {
 	$sql.= " AND f.fk_statut = '".$db->escape($search_status)."'";
 }
