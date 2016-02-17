@@ -851,6 +851,9 @@ if (empty($reshook))
 						$desc = dol_concatdesc($desc, $tmptxt);
 					}
 
+                                // Add url if exists
+				if($prod->url) $desc = dol_concatdesc($desc,$prod->url);
+
 				$type = $prod->type;
 				$fk_unit = $prod->fk_unit;
 			} else {
